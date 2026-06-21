@@ -219,7 +219,9 @@
   .org:hover{border-color:var(--line-strong);transform:translateY(-3px);}
   .org::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
   .org:hover::after{transform:scaleX(1);}
-  .org .mark{width:42px;height:42px;border-radius:10px;background:rgba(134,167,200,0.09);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono";font-size:.92rem;color:var(--accent);margin-bottom:20px;}
+  .org .ava{position:relative;width:66px;height:66px;border-radius:50%;margin-bottom:20px;background:rgba(134,167,200,0.10);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .org .ava span{font-family:"IBM Plex Mono";font-size:.95rem;color:var(--accent);}
+  .org .ava img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .org .nm{font-family:"IBM Plex Sans";font-weight:600;font-size:1.08rem;letter-spacing:-0.01em;}
   .org .af{color:var(--muted);font-size:.88rem;margin-top:5px;}
 
@@ -296,7 +298,7 @@
     <h1 class="title">World Modeling <em>for Physics</em></h1>
     <p class="lede">A five-day workshop on learning predictive models of the physical world &mdash; from joint-embedding predictive architectures to world models that reason in latent space.</p>
     <div class="hero-meta">
-      <span class="chip date"><span class="dot"></span>Feb 22 &ndash; 26, 2027</span>
+      <span class="chip date"><span class="dot"></span>Feb 28 &ndash; Mar 5, 2027</span>
       <span class="chip"><span class="dot"></span>Aspen, Colorado</span>
       <span class="chip"><span class="dot"></span>~70 participants</span>
     </div>
@@ -312,7 +314,7 @@
 <!-- READOUT -->
 <div class="readout">
   <div class="wrap">
-    <div class="ro"><span class="k">Dates</span><span class="v">Feb 22&ndash;26 <small>&middot; 5 days</small></span></div>
+    <div class="ro"><span class="k">Dates</span><span class="v">Feb 28 &ndash; Mar 5 <small>&middot; 2027</small></span></div>
     <div class="ro"><span class="k">Venue</span><span class="v">Aspen Center <small>&middot; for Physics</small></span></div>
     <div class="ro"><span class="k">Format</span><span class="v">Talks + open afternoons</span></div>
     <div class="ro"><span class="k">Participants</span><span class="v">~70 <small>&middot; invitation &amp; CFP</small></span></div>
@@ -373,7 +375,7 @@
           <div class="tl"><div class="d">DEC 15, 2026</div><div class="e">Submission deadline</div><div class="n">23:59 AoE, no extensions.</div></div>
           <div class="tl"><div class="d">JAN 15, 2027</div><div class="e">Notifications</div><div class="n">Decisions and reviews returned.</div></div>
           <div class="tl"><div class="d">FEB 01, 2027</div><div class="e">Camera-ready &amp; registration</div><div class="n">Final materials and travel confirmation.</div></div>
-          <div class="tl"><div class="d">FEB 22&ndash;26, 2027</div><div class="e">Workshop</div><div class="n">Aspen Center for Physics.</div></div>
+          <div class="tl"><div class="d">FEB 28 &ndash; MAR 5, 2027</div><div class="e">Workshop</div><div class="n">Aspen Center for Physics.</div></div>
         </div>
       </div>
     </div>
@@ -387,7 +389,7 @@
     <div class="reveal">
       <div class="daytabs" id="daytabs"></div>
       <div class="sched" id="sched"></div>
-      <div class="pgm-note">Afternoons are deliberately kept open &mdash; the Aspen tradition of unstructured time for collaboration, working groups, and the occasional ski. Speakers to be announced after review.</div>
+      <div class="pgm-note">Participants arrive Sunday, February 28, with an evening welcome reception; sessions run Monday through Friday. Afternoons are deliberately kept open &mdash; the Aspen tradition of unstructured time for collaboration, working groups, and the occasional ski. Speakers to be announced after review.</div>
     </div>
   </div>
 </section>
@@ -424,10 +426,10 @@
   <div class="wrap">
     <div class="sec-head reveal"><span class="sec-no">06</span><h2 class="sec-title">Organizers</h2></div>
     <div class="org-grid">
-      <div class="org reveal"><div class="mark">RB</div><div class="nm">Randall Balestriero</div><div class="af">Affiliation &mdash; to confirm</div></div>
-      <div class="org reveal"><div class="mark">SH</div><div class="nm">Shirley Ho</div><div class="af">Affiliation &mdash; to confirm</div></div>
-      <div class="org reveal"><div class="mark">JK</div><div class="nm">Julia Kempe</div><div class="af">Affiliation &mdash; to confirm</div></div>
-      <div class="org reveal"><div class="mark">YL</div><div class="nm">Yann LeCun</div><div class="af">Affiliation &mdash; to confirm</div></div>
+      <div class="org reveal"><div class="ava"><span>RB</span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVjn63OZhz8pyLEa2VAm_ys1_ZTu3vzfN5LiEIv54ZTQ&amp;s=10" alt="Randall Balestriero" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="nm">Randall Balestriero</div><div class="af">Brown University</div></div>
+      <div class="org reveal"><div class="ava"><span>SH</span><img src="https://polymathic-ai.org/images/avatars/shirley_ho.jpg" alt="Shirley Ho" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="nm">Shirley Ho</div><div class="af">New York University</div></div>
+      <div class="org reveal"><div class="ava"><span>JK</span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAGpoB6jrY7GrICrKmfH-ECMBAbwlYvNuEwsjII0RFgw&amp;s=10" alt="Julia Kempe" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="nm">Julia Kempe</div><div class="af">New York University</div></div>
+      <div class="org reveal"><div class="ava"><span>YL</span><img src="https://engineering.nyu.edu/sites/default/files/styles/square_large_default_1x/public/2018-06/yann-lecun.jpg?h=65172a10&amp;itok=NItwgG8z" alt="Yann LeCun" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="nm">Yann LeCun</div><div class="af">New York University</div></div>
     </div>
   </div>
 </section>
@@ -436,7 +438,7 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <div class="ft-brand">World Modeling for Physics<span>Aspen Center for Physics &middot; February 22&ndash;26, 2027</span></div>
+      <div class="ft-brand">World Modeling for Physics<span>Aspen Center for Physics &middot; February 28 &ndash; March 5, 2027</span></div>
       <div class="foot-cols">
         <div class="col"><h4>Workshop</h4><a href="#about">About</a><a href="#topics">Themes</a><a href="#program">Program</a></div>
         <div class="col"><h4>Participate</h4><a href="#cfp">Call for Papers</a><a href="#cfp">Submit</a><a href="#venue">Venue &amp; Travel</a></div>
@@ -482,11 +484,11 @@ document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 
 /* ---------- PROGRAM data + render ---------- */
 const days = [
-  {label:'Mon 22', theme:'Foundations of joint-embedding learning'},
-  {label:'Tue 23', theme:'World models & latent dynamics'},
-  {label:'Wed 24', theme:'Symmetry & physical priors'},
-  {label:'Thu 25', theme:'Foundation models for science'},
-  {label:'Fri 26', theme:'Emergence, interpretability & open problems'},
+  {label:'Mon, Mar 1', theme:'Foundations of joint-embedding learning'},
+  {label:'Tue, Mar 2', theme:'World models & latent dynamics'},
+  {label:'Wed, Mar 3', theme:'Symmetry & physical priors'},
+  {label:'Thu, Mar 4', theme:'Foundation models for science'},
+  {label:'Fri, Mar 5', theme:'Emergence, interpretability & open problems'},
 ];
 function schedule(theme){
   return [
