@@ -200,6 +200,17 @@
   .slot.free .t{color:var(--accent-2);}
   .pgm-note{margin-top:24px;color:var(--muted);font-size:.9rem;font-family:"IBM Plex Mono";letter-spacing:.01em;line-height:1.6;}
 
+  /* Speakers */
+  .speaker-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .speaker{display:grid;grid-template-columns:150px 1fr;gap:26px;border:1px solid var(--line);border-radius:var(--r);padding:22px;background:linear-gradient(150deg,var(--surface-2),var(--surface));transition:.25s;}
+  .speaker:hover{border-color:var(--line-strong);transform:translateY(-3px);}
+  .speaker-photo{width:150px;aspect-ratio:4/5;border-radius:10px;object-fit:cover;object-position:center top;background:rgba(134,167,200,0.10);}
+  .speaker h3{font-family:"Newsreader",serif;font-size:1.55rem;font-weight:500;}
+  .speaker .aff{color:var(--warm);font-size:.86rem;margin-top:6px;}
+  .speaker p{color:var(--muted);font-size:.92rem;line-height:1.58;margin:14px 0 0;}
+  .speaker .profile{display:inline-block;margin-top:14px;color:var(--accent);font-family:"IBM Plex Mono";font-size:.72rem;letter-spacing:.04em;}
+  .speaker .profile:hover{color:var(--text);}
+
   /* Venue */
   .venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,72px);align-items:center;}
   .venue-grid p{color:#C4C9D4;}
@@ -239,6 +250,7 @@
   /* Responsive */
   @media(max-width:900px){
     .org-grid{grid-template-columns:repeat(2,1fr);}
+    .speaker-grid{grid-template-columns:1fr;}
   }
   @media(max-width:1024px){
     .navlinks{display:none;}
@@ -252,6 +264,10 @@
     .slot{grid-template-columns:88px 1fr;gap:16px;}
     .pull{margin-top:8px;}
     .field-cap{display:none;}
+    .speaker{grid-template-columns:92px 1fr;gap:18px;padding:18px;}
+    .speaker-photo{width:92px;}
+    .speaker p{grid-column:1/-1;margin-top:4px;}
+    .speaker .profile{grid-column:1/-1;margin-top:0;}
   }
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
@@ -278,11 +294,12 @@
   </a>
   <div class="navlinks" id="navlinks">
     <a href="#home" class="navlink" data-target="home">Home</a>
-    <a href="#cfp" class="navlink" data-target="cfp">Call for Papers</a>
+    <a href="#cfp" class="navlink" data-target="cfp">Call for Abstracts</a>
     <a href="#program" class="navlink" data-target="program">Program</a>
+    <a href="#speakers" class="navlink" data-target="speakers">Speakers</a>
     <a href="#venue" class="navlink" data-target="venue">Venue</a>
     <a href="#organizers" class="navlink" data-target="organizers">Organizers</a>
-    <a href="#cfp" class="nav-cta">Submit &rarr;</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8HLKLEREAF_-mNR1dLcew7w7WdRFLMV243G1m1gh4n6z8tg/viewform" class="nav-cta" target="_blank" rel="noopener noreferrer">Submit &rarr;</a>
   </div>
   <button class="burger" id="burger" aria-label="Toggle menu">&#8801;</button>
 </nav>
@@ -303,7 +320,7 @@
       <span class="chip"><span class="dot"></span>~70 participants</span>
     </div>
     <div class="cta-row">
-      <a href="#cfp" class="btn btn-primary">Call for Papers</a>
+      <a href="#cfp" class="btn btn-primary">Call for Abstracts</a>
       <a href="#program" class="btn btn-ghost">View Program</a>
     </div>
   </div>
@@ -357,24 +374,23 @@
 <!-- CFP -->
 <section class="block" id="cfp">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">03</span><h2 class="sec-title">Call for Papers</h2></div>
+    <div class="sec-head reveal"><span class="sec-no">03</span><h2 class="sec-title">Call for Abstracts</h2></div>
     <div class="cfp-grid">
       <div class="reveal">
-        <p>We invite contributions at the intersection of representation learning and the physical sciences. Both empirical and theoretical work is welcome, including position papers that frame open problems.</p>
+        <p>We invite contributions at the intersection of world modeling, representation learning, and the physical sciences. Submit your abstract through the official workshop form for consideration in the contributed program.</p>
         <ul class="req">
-          <li>Extended abstracts up to 4 pages, plus references and appendix.</li>
-          <li>Single-blind review; preprints are permitted and encouraged.</li>
-          <li>Accepted work is presented as a talk or poster; no proceedings, preprint-friendly.</li>
-          <li>Submissions via OpenReview (link to be announced).</li>
+          <li>Provide the paper title and full author list.</li>
+          <li>List all author affiliations.</li>
+          <li>Upload the submission file through the Google Form.</li>
+          <li>Google sign-in is required by the form for file upload.</li>
         </ul>
-        <a href="#" class="btn btn-primary" style="margin-top:28px;">Submit on OpenReview &rarr;</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8HLKLEREAF_-mNR1dLcew7w7WdRFLMV243G1m1gh4n6z8tg/viewform" class="btn btn-primary" style="margin-top:28px;" target="_blank" rel="noopener noreferrer">Open submission form &rarr;</a>
       </div>
       <div class="reveal">
         <div class="timeline">
-          <div class="tl done"><div class="d">OCT 2026</div><div class="e">Submissions open</div><div class="n">Portal goes live on OpenReview.</div></div>
-          <div class="tl"><div class="d">DEC 15, 2026</div><div class="e">Submission deadline</div><div class="n">23:59 AoE, no extensions.</div></div>
-          <div class="tl"><div class="d">JAN 15, 2027</div><div class="e">Notifications</div><div class="n">Decisions and reviews returned.</div></div>
-          <div class="tl"><div class="d">FEB 01, 2027</div><div class="e">Camera-ready &amp; registration</div><div class="n">Final materials and travel confirmation.</div></div>
+          <div class="tl done"><div class="d">NOW OPEN</div><div class="e">Abstract submissions</div><div class="n">Submit through the official Google Form.</div></div>
+          <div class="tl"><div class="d">FRI, OCT 9, 2026</div><div class="e">Submission deadline</div><div class="n">23:59 Anywhere on Earth (AoE).</div></div>
+          <div class="tl"><div class="d">AFTER REVIEW</div><div class="e">Participant notifications</div><div class="n">Decisions and next steps will be sent to applicants by email.</div></div>
           <div class="tl"><div class="d">FEB 28 &ndash; MAR 5, 2027</div><div class="e">Workshop</div><div class="n">Aspen Center for Physics.</div></div>
         </div>
       </div>
@@ -389,7 +405,34 @@
     <div class="reveal">
       <div class="daytabs" id="daytabs"></div>
       <div class="sched" id="sched"></div>
-      <div class="pgm-note">Participants arrive Sunday, February 28, with an evening welcome reception; sessions run Monday through Friday. Afternoons are deliberately kept open &mdash; the Aspen tradition of unstructured time for collaboration, working groups, and the occasional ski. Speakers to be announced after review.</div>
+      <div class="pgm-note">Participants arrive Sunday, February 28, with an evening welcome reception; sessions run Monday through Friday. Afternoons are deliberately kept open &mdash; the Aspen tradition of unstructured time for collaboration, working groups, and the occasional ski. Confirmed speakers appear below; additional speakers and the detailed schedule will be announced.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section class="block" id="speakers" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-no">05</span><h2 class="sec-title">Confirmed Speakers</h2></div>
+    <div class="speaker-grid">
+      <article class="speaker reveal">
+        <img class="speaker-photo" src="https://caos.cims.nyu.edu/media/people_photos/avatar_hub0a4f5beab3a642c3a6db917a461aee0_12883_270x270_fill_q75_lanczos_center.jpeg.400x400_q94_autocrop_crop-smart_upscale.jpg" alt="Laure Zanna" loading="lazy" referrerpolicy="no-referrer">
+        <div>
+          <h3>Laure Zanna</h3>
+          <div class="aff">New York University</div>
+          <p>Professor of Mathematics and Atmosphere/Ocean Science at NYU Courant. Her research combines theory, numerical simulation, statistics, and machine learning to understand ocean dynamics, climate predictability, turbulence, heat and carbon uptake, and sea-level rise.</p>
+          <a class="profile" href="https://caos.cims.nyu.edu/dynamic/people/faculty/" target="_blank" rel="noopener noreferrer">NYU profile &nearr;</a>
+        </div>
+      </article>
+      <article class="speaker reveal">
+        <img class="speaker-photo" src="https://cdn.prod.website-files.com/67c572fffc1efc8ac735cff0/6a7304e58ae2ee542b6ec6ef_697a31cb499074497e56a024_Megan%2520Stanlet%2520big.webp" alt="Megan Stanley" loading="lazy" referrerpolicy="no-referrer">
+        <div>
+          <h3>Megan Stanley</h3>
+          <div class="aff">Ellison Institute of Technology, Oxford</div>
+          <p>Research Scientist in EIT&rsquo;s AI &amp; Robotics Institute, working on foundational machine learning for the natural sciences. Previously at Microsoft Research AI for Science, she co-created Aurora, a foundation model for the Earth system, and worked on quantum chemistry and drug discovery.</p>
+          <a class="profile" href="https://eit.org/people/megan-stanley" target="_blank" rel="noopener noreferrer">EIT profile &nearr;</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -397,7 +440,7 @@
 <!-- VENUE -->
 <section class="block" id="venue">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">05</span><h2 class="sec-title">Venue</h2></div>
+    <div class="sec-head reveal"><span class="sec-no">06</span><h2 class="sec-title">Venue</h2></div>
     <div class="venue-grid">
       <div class="reveal">
         <p>The workshop is hosted at the Aspen Center for Physics, an independent institution that has convened physicists for focused, collaborative research since 1962. Its format &mdash; short mornings, open afternoons, no distractions &mdash; is the reason the meeting is structured the way it is.</p>
@@ -424,7 +467,7 @@
 <!-- ORGANIZERS -->
 <section class="block" id="organizers" style="padding-top:0;">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-no">06</span><h2 class="sec-title">Organizers</h2></div>
+    <div class="sec-head reveal"><span class="sec-no">07</span><h2 class="sec-title">Organizers</h2></div>
     <div class="org-grid">
       <div class="org reveal"><div class="ava"><span>RB</span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVjn63OZhz8pyLEa2VAm_ys1_ZTu3vzfN5LiEIv54ZTQ&amp;s=10" alt="Randall Balestriero" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="nm">Randall Balestriero</div><div class="af">Brown University</div></div>
       <div class="org reveal"><div class="ava"><span>SH</span><img src="https://polymathic-ai.org/images/avatars/shirley_ho.jpg" alt="Shirley Ho" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></div><div class="nm">Shirley Ho</div><div class="af">New York University</div></div>
@@ -440,8 +483,8 @@
     <div class="foot-top">
       <div class="ft-brand">World Modeling for Physics<span>Aspen Center for Physics &middot; February 28 &ndash; March 5, 2027</span></div>
       <div class="foot-cols">
-        <div class="col"><h4>Workshop</h4><a href="#about">About</a><a href="#topics">Themes</a><a href="#program">Program</a></div>
-        <div class="col"><h4>Participate</h4><a href="#cfp">Call for Papers</a><a href="#cfp">Submit</a><a href="#venue">Venue &amp; Travel</a></div>
+        <div class="col"><h4>Workshop</h4><a href="#about">About</a><a href="#topics">Themes</a><a href="#program">Program</a><a href="#speakers">Speakers</a></div>
+        <div class="col"><h4>Participate</h4><a href="#cfp">Call for Abstracts</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8HLKLEREAF_-mNR1dLcew7w7WdRFLMV243G1m1gh4n6z8tg/viewform" target="_blank" rel="noopener noreferrer">Submit</a><a href="#venue">Venue &amp; Travel</a></div>
         <div class="col"><h4>Contact</h4><a href="#">workshop@&hellip;</a><a href="#">Code of conduct</a><a href="#">Mailing list</a></div>
       </div>
     </div>
